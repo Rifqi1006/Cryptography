@@ -40,7 +40,7 @@ Protokol mengikuti **tiga fase utama**:
 
 ---
 
-## 🛠️ Teknologi dan Peralatan
+## 🛠️ Teknologi dan Tools
 - **Bahasa Pemrograman**: `Python 3`  
 - **Pustaka Kriptografi**: `Crypto.Util.number` → pembangkitan bilangan prima, uji primalitas, invers modular
 - **Library Random**: `random` → pembangkitan kunci rahasia secara acak
