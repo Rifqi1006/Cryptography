@@ -1,17 +1,17 @@
 # 🔐 Shamir's No-Key Protocol
 
-Repository ini merealisasikan skema **Shamir's No-Key Protocol**, sebuah protokol kriptografi yang memungkinkan pertukaran kunci rahasia antara dua entitas **tanpa perlu berbagi kunci sebelumnya** melalui saluran yang tidak aman. Protokol ini mengandalkan kompleksitas komputasi **logaritma diskrit** dalam grup modular untuk menjaga keamanan distribusi kunci.
+Repository ini merealisasikan skema Shamir's No-Key Protocol, sebuah protokol kriptografi yang memungkinkan pertukaran kunci rahasia antara dua entitas tanpa perlu berbagi kunci sebelumnya melalui saluran yang tidak aman. Protokol ini mengandalkan kompleksitas komputasi logaritma diskrit dalam grup modular untuk menjaga keamanan distribusi kunci.
 
 ---
 
 ## 🎯 Tujuan
-- Menunjukkan bagaimana **Shamir's No-Key Protocol** dapat diimplementasikan secara praktis menggunakan `Python`.  
-- Mengevaluasi **keamanan** dan **efisiensi komputasi** berdasarkan ukuran bilangan prima (`p`).  
+- Menunjukkan bagaimana Shamir's No-Key Protocol dapat diimplementasikan secara praktis menggunakan `Python`.  
+- Mengevaluasi keamanan dan efisiensi komputasi berdasarkan ukuran bilangan prima (`p`).  
 
 ---
 
 ## 📜 Skema Protokol
-Protokol mengikuti **tiga fase utama**:
+Protokol mengikuti tiga fase utama:
 
 ### 1. 🔑 Inisialisasi
 - Kedua pihak menyepakati bilangan prima besar `p` (bersifat publik).  
@@ -25,11 +25,11 @@ Protokol mengikuti **tiga fase utama**:
 ---
 
 ### 2. 📩 Pertukaran Pesan
-1. **Langkah 1**: A → B :  
+1. Langkah 1: A → B :  
    `A1 ≡ K^a mod p`  
-2. **Langkah 2**: B → A :  
+2. Langkah 2: B → A :  
    `B1 ≡ (A1)^b mod p ≡ K^(a*b) mod p`  
-3. **Langkah 3**: A → B :  
+3. Langkah 3: A → B :  
    `A2 ≡ (B1)^(a_inv) mod p ≡ K^b mod p`  
 
 ---
@@ -41,14 +41,14 @@ Protokol mengikuti **tiga fase utama**:
 ---
 
 ## 🛠️ Teknologi dan Tools
-- **Bahasa Pemrograman**: `Python 3`  
-- **Pustaka Kriptografi**: `Crypto.Util.number` → pembangkitan bilangan prima, uji primalitas, invers modular
-- **Library Random**: `random` → pembangkitan kunci rahasia secara acak
-- **Sistem & Utility**: `sys` → pengaturan sistem dan kompatibilitas eksekusi  
-- **Pustaka Matematika**: `sympy` → komputasi simbolik, verifikasi koprima  
-- **Random Generator**: `random` → pembangkitan kunci rahasia  
-- **Pengukuran Waktu**: `time` → analisis performa komputasi  
-- **Platform**: Google Colab  
+- Bahasa Pemrograman: `Python 3`  
+- Pustaka Kriptografi: `Crypto.Util.number` → pembangkitan bilangan prima, uji primalitas, invers modular
+- Library Random: `random` → pembangkitan kunci rahasia secara acak
+- Sistem & Utility: `sys` → pengaturan sistem dan kompatibilitas eksekusi  
+- Pustaka Matematika: `sympy` → komputasi simbolik, verifikasi koprima  
+- Random Generator: `random` → pembangkitan kunci rahasia  
+- Pengukuran Waktu: `time` → analisis performa komputasi  
+- Platform: Google Colab  
 
 ---
 
@@ -60,5 +60,5 @@ Simulasi protokol dilakukan dengan tiga ukuran bilangan prima:
 - `2048-bit`  
 
 📌 **Hasil Eksperimen**:
-- Protokol berhasil memulihkan kunci dengan **akurasi 100%** pada semua ukuran parameter.  
+- Protokol berhasil memulihkan kunci dengan akurasi 100% pada semua ukuran parameter.  
 - Waktu komputasi meningkat seiring dengan ukuran parameter, sesuai dengan kompleksitas operasi modular.  
